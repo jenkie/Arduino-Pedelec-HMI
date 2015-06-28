@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Battery Capacity"
+            android:id="@+id/textView2"
+            android:layout_weight="0.5"
+            android:textStyle="bold"
+            android:maxLines="1"/>
+
+        <EditText
+            android:layout_width="103dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/et_capacity"
+            android:layout_weight="0.16"
+            android:maxLength="4"
+            android:textIsSelectable="false"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Wh"
+            android:id="@+id/textView3"
+            android:layout_weight="1"
+            android:maxLines="1"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Select Device"
+        android:id="@+id/textView"
+        android:layout_gravity="left|center_vertical"
+        android:textStyle="bold"
+        />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lv_paired"
+        android:choiceMode="singleChoice"
+        android:listSelector="#ff0099cc"
+        android:layout_weight="0.1"
+        android:longClickable="true"/>
+
+    <ToggleButton
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sw_log"
+        android:textOn="Logging enabled"
+        android:textOff="Logging disabled"
+        android:checked="false"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:id="@+id/bt_save"
+            android:onClick="bt_save_click"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:id="@+id/bt_cancel"/>
+    </LinearLayout>
+
+</LinearLayout>

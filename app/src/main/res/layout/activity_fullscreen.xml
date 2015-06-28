@@ -1,0 +1,357 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".FullscreenActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+    <TextView android:id="@+id/fullscreen_content" android:layout_width="match_parent"
+        android:layout_height="match_parent" android:keepScreenOn="true" android:textColor="#33b5e5"
+        android:textStyle="bold" android:textSize="50sp" android:gravity="center"
+        android:text="" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ProgressBar
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="221dp"
+                android:layout_height="59dp"
+                android:id="@+id/progressbar_battery"
+                android:layout_gravity="center"
+                android:progress="50"
+                android:indeterminate="false"
+                android:layout_weight="2"
+                android:clickable="false"
+                android:longClickable="false"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="50 %"
+                android:id="@+id/tv_battery"
+                android:layout_gravity="center"
+                android:singleLine="false"
+                android:layout_weight="1"
+                android:lines="2"
+                android:textAlignment="center"
+                android:textSize="30dp"/>
+        </LinearLayout>
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2">
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/imageView"
+                    android:layout_column="0"
+                    android:layout_weight="1"
+                    android:src="@drawable/track"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="0.0"
+                    android:id="@+id/tv_speed"
+                    android:layout_gravity="center_horizontal|top"
+                    android:textSize="40dp"
+                    android:typeface="normal"
+                    android:textStyle="bold"
+                    android:layout_column="1"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="kmh"
+                    android:id="@+id/textView"
+                    android:layout_column="2"
+                    android:layout_weight="0.1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="0"
+                    android:id="@+id/tv_km"
+                    android:layout_gravity="center_horizontal|top"
+                    android:textSize="40dp"
+                    android:typeface="normal"
+                    android:textStyle="bold"
+                    android:layout_column="3"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="km"
+                    android:id="@+id/textView2"
+                    android:layout_column="4"
+                    android:layout_weight="0.1"/>
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/imageView4"
+                    android:layout_column="0"
+                    android:layout_weight="1"
+                    android:src="@drawable/range"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="0.0"
+                    android:id="@+id/tv_range"
+                    android:layout_gravity="center_horizontal|top"
+                    android:textSize="40dp"
+                    android:typeface="normal"
+                    android:textStyle="bold"
+                    android:layout_column="1"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="km"
+                    android:id="@+id/textView8"
+                    android:layout_gravity="center_horizontal|top"
+                    android:typeface="normal"
+                    android:textStyle="bold"
+                    android:layout_column="2"
+                    android:layout_weight="0.1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="0.0"
+                    android:id="@+id/tv_whkm"
+                    android:layout_column="3"
+                    android:layout_weight="1"
+                    android:textSize="40dp"
+                    android:textStyle="bold"
+                    android:typeface="normal"
+                    android:singleLine="true"
+                    android:password="false"
+                    android:textAlignment="viewStart"
+                    android:numeric="signed|decimal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Wh/ \n km"
+                    android:id="@+id/textView10"
+                    android:layout_column="4"
+                    android:layout_weight="0.1"
+                    android:singleLine="false"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/imageView2"
+                    android:layout_column="0"
+                    android:layout_weight="1"
+                    android:src="@drawable/motor"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="0"
+                    android:id="@+id/tv_power"
+                    android:layout_gravity="center_horizontal|top"
+                    android:textSize="40dp"
+                    android:typeface="normal"
+                    android:textStyle="bold"
+                    android:layout_column="1"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="W"
+                    android:id="@+id/textView3"
+                    android:layout_column="2"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="0"
+                    android:id="@+id/tv_wh"
+                    android:layout_gravity="center_horizontal|top"
+                    android:textSize="40dp"
+                    android:typeface="normal"
+                    android:textStyle="bold"
+                    android:layout_column="3"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Wh"
+                    android:id="@+id/textView4"
+                    android:layout_column="4"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/imageView3"
+                    android:layout_column="0"
+                    android:layout_weight="1"
+                    android:src="@drawable/human"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="0"
+                    android:id="@+id/tv_power_human"
+                    android:layout_gravity="center_horizontal|top"
+                    android:textSize="40dp"
+                    android:typeface="normal"
+                    android:textStyle="bold"
+                    android:layout_column="1"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="W"
+                    android:id="@+id/textView5"
+                    android:layout_column="2"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="0"
+                    android:id="@+id/tv_wh_human"
+                    android:layout_gravity="center_horizontal|top"
+                    android:textSize="40dp"
+                    android:typeface="normal"
+                    android:textStyle="bold"
+                    android:layout_column="3"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Wh"
+                    android:id="@+id/textView6"
+                    android:layout_column="4"/>
+            </TableRow>
+
+        </TableLayout>
+
+        <LinearLayout android:id="@+id/fullscreen_content_controls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/black"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent"
+            android:gravity="bottom"
+            android:layout_weight="1">
+
+            <Button android:id="@+id/bt_support_less"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="&lt;"
+                android:textSize="50dp"
+                android:onClick="bt_support_less_click"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100 W"
+                android:id="@+id/tv_support"
+                android:textAlignment="center"
+                android:textSize="50dp"
+                android:textStyle="bold"
+                android:layout_weight="1"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&gt;"
+                android:onClick="bt_support_more_click"
+                android:id="@+id/bt_support_more"
+                android:layout_weight="1"
+                android:textSize="50dp"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>
